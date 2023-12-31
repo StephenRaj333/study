@@ -1,3 +1,46 @@
+// call by value 
+
+var a = 15; 
+var b = a;
+console.log(a);
+console.log(b);
+b = 20; 
+console.log(a);
+console.log(b);
+
+// call by reference 
+
+var arr = [10,20,30]; 
+var brr = a;
+console.log(arr);
+console.log(brr);
+b[0] = 25; 
+console.log(arr);
+console.log(brr);
+
+// deep value 
+
+var arr = [10,20,30]; 
+var brr = a;
+console.log(arr);
+console.log(brr);
+b = [25,45,67]; 
+console.log(arr);
+console.log(brr);
+
+// Xml HTTP Method Basic 
+var xml = new XMLHttpRequest();
+
+xml.open("GET", "https://restcountries.com/v3.1/all");
+
+xml.send();
+
+xml.onload = function () {
+    let xmlData = JSON.parse(xml.response);
+    console.log(xmlData[0].name.common); 
+}   
+
+
 
 // Gloabl Exexution scope   
 console.log(a); 
